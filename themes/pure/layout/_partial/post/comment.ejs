@@ -13,7 +13,7 @@
     <% } else if (theme.comment.type === 'gitment') { %>
 
     <% } else if (theme.comment.type === 'gitalk') { %>
-           
+      <%- partial('_script/_comment/gitalk') %>         
     <% } else if (theme.comment.type === 'valine') { %>
       <div id="vcomments"></div>
     <% } %>

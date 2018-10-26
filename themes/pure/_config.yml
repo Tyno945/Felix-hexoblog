@@ -31,17 +31,17 @@ site:
     width: 40
     height: 40
     url: ../images/logo.png
-  title: Hexoblog # 页面title
+  title: Felix Blog # 页面title
   favicon: /favicon.png
   board: <p>欢迎交流与分享经验!</p> # 站点公告
-  copyright: false # 底部版权信息
+  copyright: true # 底部版权信息
 
 # config
 config:
-  skin: theme-black # 主题颜色 theme-black theme-blue theme-green theme-purple
+  skin: theme-purple # 主题颜色 theme-black theme-blue theme-green theme-purple
   layout: main-center # 布局方式 main-left main-center main-right
   toc: true # 是否开启文章章节目录导航
-  menu_highlight: false # 是否开启当前菜单高亮显示
+  menu_highlight: true # 是否开启当前菜单高亮显示
   thumbnail: false # enable posts thumbnail, options: true, false
   excerpt_link: Read More
 
@@ -58,16 +58,16 @@ sidebar: right
 widgets:
   - board  
   - category
-  - tag
+#  - tag
   - tagcloud
   - archive
   - recent_posts
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
-# - category
-# - tagcloud
-# - archive  
+ - category
+ - tagcloud
+ - archive  
 
 # widget behavior
 archive_type: 'monthly'
@@ -97,18 +97,18 @@ donate:
 # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
 share:
   enable: true  # 是否启用分享
-  sites: weibo,qq,wechat,facebook,twitter  # PC端显示的分享图标
+  sites: weibo,qq,wechat  # PC端显示的分享图标
   mobile_sites: weibo,qq,qzone  # 移动端显示的分享图标
 
 # Github
 github: 
-  username: cofess  # github username
+  username: Tyno945  # github username
 
 # Comment
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
 comment:
-  type: valine  # 启用哪种评论系统
+  type: gitalk  # 启用哪种评论系统
   disqus:  # enter disqus shortname here
   youyan: 
     uid: 1783844 # enter youyan uid 
@@ -121,11 +121,11 @@ comment:
     ClientSecret: 
     lazy: false
   gitalk: # gitalk. https://gitalk.github.io/
-    owner:  #必须. GitHub repository 所有者，可以是个人或者组织。
-    admin:  #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
-    repo:  #必须. GitHub repository.
-    ClientID:  #必须. GitHub Application Client ID.
-    ClientSecret:  #必须. GitHub Application Client Secret.
+    owner: Tyno945 #必须. GitHub repository 所有者，可以是个人或者组织。
+    admin: Tyno945 #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
+    repo: Tyno945.github.io #必须. GitHub repository.
+    ClientID: fcd80fd3d889a3cf0f21 #必须. GitHub Application Client ID.
+    ClientSecret: 574cb044b5fbb91d4c5eef4b4bf7377e2ced8773 #必须. GitHub Application Client Secret.
   valine: # Valine. https://valine.js.org
     appid:  # your leancloud application appid
     appkey:  # your leancloud application appkey
