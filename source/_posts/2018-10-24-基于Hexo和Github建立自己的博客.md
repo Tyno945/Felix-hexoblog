@@ -6,10 +6,14 @@ tags:
 categories: 原创博文
 toc: true
 date: 2018-10-24 16:49:02
-updated: 2018-10-25 16:49:02
+updated: 2018-10-27 16:49:02
 ---
 
 欢迎来到风和博客！这是我的第一篇博客，在本篇博客中，我首先向大家介绍下如何建立一个自己个人的博客。我的博客网站是基于Hexo和Github Page搭建的，使用VScode编辑器软件和Markdown语法写博客。
+
+<!-- ![hexo&github](/images/heox&github.jpg) -->
+
+{% asset_img hexo-github.jpg hexo-github %}
 
 **环境和工具准备**
 - Windows10系统
@@ -96,7 +100,21 @@ categories: category
 
 在Hexo框架博客的首页会显示文章的内容（默认显示文章的全部内容），如果当文章太长的时候就会显得十分冗余，所以我们有必要对其进行精简，只需在文章中使用 `<!--more-->` 标志，表示只会显示标志前面的内容。
 
-（4）**支持评论**
+（4）**在博客中插入图片**
+
+方法一：如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在 `source/images` 文件夹中。然后通过类似于 `![](/images/image.jpg)` 的方法访问它们。
+
+方法二：利用标签插件，Hexo也提供了更组织化的方式来管理资源。将 `config.yml` 文件中的 `post_asset_folder` 选项设为 `true` 来打开。
+
+当资源文件管理功能打开后，Hexo将会在你每一次创建新文章时自动创建一个同名文件夹。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们。
+
+在文章中使用如下方式插入图片：
+
+    {% asset_img example.jpg This is an example image %}
+
+方法三: 在打开资源文件管理功能的前提下，安装插件`npm install hexo-asset-image --save`,在资源文件夹（就是那个与title同名的文件夹）中添加了图片example.PNG，则可以在对应的文章中使用语句 `![示例图片](title/example.PNG "示例图片")` 添加图片。
+
+（5）**支持评论**
 
 我使用的是[Gitalk](https://github.com/gitalk/gitalk)评论插件，它是一个基于 GitHub Issue 和 Preact 开发的评论插件。
 
@@ -149,3 +167,32 @@ deploy:
 3.更新网站并发布
 
     $ hexo clean && hexo deploy -g
+
+## 博客优化
+
+### 代码压缩
+
+生成静态文件时，自动压缩html,css,js
+
+    $ npm install hexo-neat --save
+
+在博客配置文件`_config.yml`中添加
+
+```yaml
+# hexo-neat
+neat_enable: true
+neat_html:
+  enable: true
+  exclude:  
+neat_css:
+  enable: true
+  exclude:
+    - '*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js' 
+```

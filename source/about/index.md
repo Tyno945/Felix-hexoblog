@@ -1,6 +1,6 @@
 ---
 title: 关于
-description: 个人简介
+description:
 layout: about
 comments: false
 sidebar: custom
