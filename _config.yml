@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo-blog
-subtitle:
-description:
-keywords:
+title: Felix blog
+subtitle: 持续创作
+description: 记录我的学习和生活
+keywords: blog
 author: Felix
 language: zh-CN
 timezone:

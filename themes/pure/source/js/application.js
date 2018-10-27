@@ -13,6 +13,8 @@ $(function() {
     });
   }
 
+  $('a.toggle-btn').trigger('click');
+
   $('#collapseToc').on('shown.bs.collapse', function() {
     // do something…
     // slimscroll
