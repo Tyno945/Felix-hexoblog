@@ -79,7 +79,9 @@ theme: pure
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:Tyno945/Tyno945.github.io.git
+  repository: 
+    github: git@github.com:Tyno945/Tyno945.github.io.git
+    coding: git@git.dev.tencent.com:Felix945/Felix945.git
   branch: master
 
 # hexo-neat
